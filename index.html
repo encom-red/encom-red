@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENCOM - ISP Inalámbrico</title>
+    <title>ENCOM - Transporte de Datos</title>
     <style>
         body, html { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
         
+        /* SECCIÓN PRINCIPAL */
         .hero { 
             background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('edited-image.jpg'); 
             background-size: cover; 
@@ -19,7 +20,7 @@
         }
 
         .button-group {
-            margin-top: 280px; /* Ajustado para quedar más abajo */
+            margin-top: 280px; /* Posiciona los botones en la zona inferior de la imagen */
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -40,6 +41,7 @@
             width: 280px;
             text-decoration: none;
             text-align: center;
+            font-weight: bold;
         }
 
         .enter-button:hover { 
@@ -48,25 +50,39 @@
             box-shadow: 0 0 30px #00d4ff; 
         }
 
-        .contact-info {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #00d4ff;
-            text-shadow: 0 0 5px #000;
-        }
-
-        .plans-container { padding: 60px 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; background: #00050a; }
+        /* SECCIÓN DE PLANES */
+        .plans-container { padding: 80px 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; background: #00050a; }
         .plan-card { 
             background: rgba(0, 20, 40, 0.8); border: 1px solid #00d4ff; padding: 30px; 
             width: 280px; border-radius: 10px; text-align: center; transition: 0.3s; 
         }
+        .plan-card:hover { transform: translateY(-10px); box-shadow: 0 0 25px rgba(0, 212, 255, 0.4); }
         .plan-card h3 { color: #00d4ff; text-transform: uppercase; }
         .plan-card ul { list-style: none; padding: 0; text-align: left; }
         .plan-card li { margin: 10px 0; font-size: 0.9rem; }
         .plan-card li::before { content: "▹"; color: #00d4ff; margin-right: 10px; }
         
         h2.section-title { text-align: center; padding: 40px 0; background: #00050a; color: #00d4ff; margin: 0; letter-spacing: 5px; }
+
+        /* PIE DE PÁGINA ESTILO ENCOM */
+        footer {
+            background: #000;
+            color: #00d4ff;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 2px solid #00d4ff;
+            box-shadow: 0 -5px 15px rgba(0, 212, 255, 0.2);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            letter-spacing: 2px;
+        }
+
+        .footer-brand { font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px #00d4ff; margin-bottom: 10px; display: block; }
+        .footer-info { font-size: 0.9rem; color: #888; margin: 5px 0; }
     </style>
 </head>
 <body>
@@ -75,11 +91,7 @@
         <div class="button-group">
             <button class="enter-button" onclick="entrarARed()">Entrar a la Red</button>
             
-            <a href="https://wa.me/584146747145?text=Hola%20ENCOM,%20deseo%20información%20sobre%20el%20servicio" target="_blank" class="enter-button">Contáctenos</a>
-            
-            <div class="contact-info">
-                Email: encom2028@gmail.com
-            </div>
+            <a href="https://wa.me/584146747145?text=Hola%20ENCOM,%20solicito%20información" target="_blank" class="enter-button">Contáctenos</a>
         </div>
     </section>
 
@@ -100,6 +112,14 @@
         </div>
     </section>
 
+    <footer>
+        <div class="footer-content">
+            <span class="footer-brand">ENCOM - TRANSPORTE DE DATOS</span>
+            <p class="footer-info">Ciudad Ojeda • Edo. Zulia • Venezuela</p>
+            <p class="footer-info" style="color: #00d4ff;">encom2028@gmail.com</p>
+        </div>
+    </footer>
+
     <audio id="encomAudio" loop>
         <source src="the-grid-audio.mp3" type="audio/mpeg">
     </audio>
@@ -109,7 +129,7 @@
             var audio = document.getElementById("encomAudio");
             audio.play();
             
-            // Redirige a la página que creamos antes
+            // Redirige a cobertura.html (asegúrate de que el archivo exista en tu carpeta)
             setTimeout(function() {
                 window.location.href = "cobertura.html";
             }, 600); 
