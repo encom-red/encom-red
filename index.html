@@ -3,25 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENCOM - ISP Inalámbrico</title>
+    <title>ENCOM - JPSYSTEM - Tron Network</title>
     <style>
+        /* ESTILOS BASE - TRON AESTHETIC */
         body, html { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
+        
+        /* SECCIÓN PRINCIPAL - HERO */
         .hero { 
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('edited-image.jpg'); 
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('edited-image.jpg'); /* <--- NOMBRE DEL ARCHIVO ACTUALIZADO */
             background-size: cover; background-position: center; height: 100vh; 
             display: flex; flex-direction: column; justify-content: center; align-items: center; 
         }
+
+        /* GRUPO DE BOTONES - TRON STYLE */
+        .button-group {
+            margin-top: 300px; /* Bajar los botones para no tapar el diseño central */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
         .enter-button { 
-            background: transparent; border: 2px solid #00d4ff; color: #00d4ff; padding: 15px 40px; 
-            font-size: 1.2rem; text-transform: uppercase; cursor: pointer; letter-spacing: 3px; 
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5); transition: 0.3s; margin-top: 10px;
-            width: 300px; text-align: center; text-decoration: none; display: inline-block;
+            background: rgba(0, 212, 255, 0.05); border: 2px solid #00d4ff; color: #00d4ff; padding: 15px 40px; 
+            font-size: 1.1rem; text-transform: uppercase; cursor: pointer; letter-spacing: 3px; 
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); transition: 0.3s; 
+            width: 280px; text-decoration: none; text-align: center; font-weight: bold;
         }
         .enter-button:hover { background: #00d4ff; color: #000; box-shadow: 0 0 30px #00d4ff; }
-        
-        .button-wrapper { margin-top: 250px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
 
-        .plans-container { padding: 60px 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; background: #00050a; }
+        /* SECCIÓN DE SERVICIOS - DETALLES */
+        .plans-container { padding: 80px 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; background: #00050a; }
         .plan-card { 
             background: rgba(0, 20, 40, 0.8); border: 1px solid #00d4ff; padding: 30px; 
             width: 280px; border-radius: 10px; text-align: center; transition: 0.3s; 
@@ -33,19 +45,23 @@
         .plan-card li::before { content: "▹"; color: #00d4ff; margin-right: 10px; }
         h2.section-title { text-align: center; padding: 40px 0; background: #00050a; color: #00d4ff; margin: 0; letter-spacing: 5px; }
 
-        /* EL PIE DE PÁGINA QUE ME PEDISTE */
-        .footer-encom {
-            background: #000; color: #00d4ff; padding: 60px 20px; text-align: center;
-            border-top: 1px solid #00d4ff; font-family: monospace; letter-spacing: 2px;
-            box-shadow: 0 -10px 20px rgba(0, 212, 255, 0.1);
+        /* PIE DE PÁGINA - CONTACTO */
+        footer {
+            background: #000; color: #00d4ff; padding: 40px 20px; text-align: center;
+            border-top: 2px solid #00d4ff; box-shadow: 0 -5px 15px rgba(0, 212, 255, 0.2);
+            font-family: 'Courier New', Courier, monospace;
         }
+        .footer-brand { font-weight: bold; font-size: 1.2rem; text-shadow: 0 0 10px #00d4ff; margin-bottom: 10px; display: block; }
+        .footer-info { font-size: 0.9rem; color: #888; margin: 5px 0; }
     </style>
 </head>
 <body>
+
     <section class="hero">
-        <div class="button-wrapper">
-            <button class="enter-button" onclick="playAudio()">Entrar a la Red</button>
-            <a href="https://wa.me/584146747145" target="_blank" class="enter-button">Contáctenos</a>
+        <div class="button-group">
+            <button class="enter-button" onclick="entrarARed()">Entrar a la Red</button>
+            
+            <a href="https://wa.me/584146747145?text=Hola%20ENCOM,%20solicito%20información" target="_blank" class="enter-button">Contáctenos</a>
         </div>
     </section>
 
@@ -56,23 +72,27 @@
         <div class="plan-card"><h3>Plan Dedicado</h3><ul><li>Simetría completa</li><li>Transporte de Datos</li><li>Latencia ultra-baja (LTU)</li></ul></div>
     </section>
 
-    <div class="footer-encom">
-        <strong style="font-size: 1.2rem;">JPSYSTEM - TRANSPORTE DE DATOS</strong><br><br>
-        Ciudad Ojeda, Edo. Zulia, Venezuela<br>
-        encom2028@gmail.com
-    </div>
+    <footer>
+        <div class="footer-content">
+            <span class="footer-brand">ENCOM - TRANSPORTE DE DATOS</span>
+            <p class="footer-info">Ciudad Ojeda • Edo. Zulia • Venezuela</p>
+            <p class="footer-info" style="color: #00d4ff;">encom2028@gmail.com</p>
+        </div>
+    </footer>
 
     <audio id="encomAudio" loop><source src="the-grid-audio.mp3" type="audio/mpeg"></audio>
 
     <script>
-        function playAudio() {
+        function entrarARed() {
             var audio = document.getElementById("encomAudio");
-            audio.play();
-            // Esto te llevará a la página de cobertura
+            // audio.play(); // Descomenta esta línea si subes el archivo de audio
+            
+            // Redirige a cobertura.html - Asegúrate de tener este archivo creado
             setTimeout(function() {
                 window.location.href = "cobertura.html";
-            }, 600);
+            }, 600); 
         }
     </script>
+
 </body>
 </html>
