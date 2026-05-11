@@ -32,7 +32,69 @@
 </head>
 <body>
     <section class="hero">
-        <a href="cobertura.html" class="boton-tron">ENTRAR A LA RED</a>
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ENCOM - Cobertura</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            /* La imagen que subiste debe llamarse cobertura.jpg */
+            background-image: url('cobertura.jpg'); 
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+            color: #00f2ff;
+        }
+        .capa-oscura {
+            background: rgba(0, 0, 0, 0.85);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        h1 { 
+            text-shadow: 0 0 15px #00f2ff; 
+            letter-spacing: 5px;
+            border-bottom: 2px solid #00f2ff;
+            padding-bottom: 10px;
+        }
+        .contenedor-sectores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 40px;
+        }
+        .cuadro-sector {
+            border: 1px solid #00f2ff;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 242, 255, 0.05);
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+        }
+        .estado { color: #00ff88; font-size: 0.8em; display: block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="capa-oscura">
+        <h1>ÁREAS DE COBERTURA</h1>
+        <div class="contenedor-sectores">
+            <div class="cuadro-sector"><h3>CIUDAD OJEDA</h3><span class="estado">● SISTEMA ACTIVO</span></div>
+            <div class="cuadro-sector"><h3>SECTOR LA L</h3><span class="estado">● SISTEMA ACTIVO</span></div>
+            <div class="cuadro-sector"><h3>LAS MOROCHAS</h3><span class="estado">● SISTEMA ACTIVO</span></div>
+            <div class="cuadro-sector"><h3>LAGUNILLAS</h3><span class="estado">● SISTEMA ACTIVO</span></div>
+            <div class="cuadro-sector"><h3>BARRIO LIBERTAD</h3><span class="estado">● SISTEMA ACTIVO</span></div>
+        </div>
+        <br><br>
+        <a href="index.html" style="color: #fff; text-decoration: none; border: 1px solid #fff; padding: 10px 20px;">VOLVER</a>
+    </div>
+</body>
+</html>
     </section>
     <h2 class="section-title">NUESTROS SERVICIOS</h2>
     <section class="plans-container">
