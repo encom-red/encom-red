@@ -13,15 +13,25 @@
         }
         .enter-button { 
             background: transparent; border: 2px solid #00d4ff; color: #00d4ff; padding: 15px 40px; 
+            font-size: 1.2rem; t<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCOM - ISP Inalámbrico</title>
+    <style>
+        body, html { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
+        .hero { 
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('edited-image.png'); 
+            background-size: cover; background-position: center; height: 100vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+        }
+        .enter-button { 
+            background: transparent; border: 2px solid #00d4ff; color: #00d4ff; padding: 15px 40px; 
             font-size: 1.2rem; text-transform: uppercase; cursor: pointer; letter-spacing: 3px; 
             box-shadow: 0 0 15px rgba(0, 212, 255, 0.5); transition: 0.3s; margin-top: 250px;
-            text-decoration: none; display: inline-block; width: auto; text-align: center;
         }
         .enter-button:hover { background: #00d4ff; color: #000; box-shadow: 0 0 30px #00d4ff; }
-        
-        /* Ajuste para que el segundo botón aparezca debajo sin dañar el hero */
-        .btn-contacto { margin-top: 20px !important; }
-
         .plans-container { padding: 60px 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; background: #00050a; }
         .plan-card { 
             background: rgba(0, 20, 40, 0.8); border: 1px solid #00d4ff; padding: 30px; 
@@ -34,35 +44,36 @@
         .plan-card li::before { content: "▹"; color: #00d4ff; margin-right: 10px; }
         h2.section-title { text-align: center; padding: 40px 0; background: #00050a; color: #00d4ff; margin: 0; letter-spacing: 5px; }
 
-        /* Estilo para el pie de página */
-        .footer-encom {
-            background: #000; color: #00d4ff; padding: 40px 20px; text-align: center;
-            border-top: 1px solid #00d4ff; font-family: monospace; letter-spacing: 2px;
+        /* Estilo añadido para el pie de página */
+        .footer-info {
+            background-color: #000;
+            color: #00d4ff;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #00d4ff;
+            font-family: monospace;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
     <section class="hero">
         <button class="enter-button" onclick="playAudio()">Entrar a la Red</button>
-        <a href="https://wa.me/584146747145" target="_blank" class="enter-button btn-contacto">Contáctenos</a>
     </section>
-
     <h2 class="section-title">NUESTROS SERVICIOS</h2>
-    
     <section class="plans-container">
         <div class="plan-card"><h3>Plan Residencial</h3><ul><li>Navegación ilimitada</li><li>Streaming y Redes</li><li>Tecnología 5GHz</li></ul></div>
         <div class="plan-card"><h3>Plan Comercial</h3><ul><li>Prioridad de datos</li><li>Balanceo de carga</li><li>IP Dinámica optimizada</li></ul></div>
         <div class="plan-card"><h3>Plan Dedicado</h3><ul><li>Simetría completa</li><li>Transporte de Datos</li><li>Latencia ultra-baja (LTU)</li></ul></div>
     </section>
 
-    <footer class="footer-encom">
+    <footer class="footer-info">
         <strong>JPSYSTEM - TRANSPORTE DE DATOS</strong><br>
         Ciudad Ojeda, Edo. Zulia, Venezuela<br>
         encom2028@gmail.com
     </footer>
 
     <audio id="encomAudio" loop><source src="the-grid-audio.mp3" type="audio/mpeg"></audio>
-
     <script>
         function playAudio() {
             var audio = document.getElementById("encomAudio");
